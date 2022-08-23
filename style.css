@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+  background-color: rgb(233, 233, 233);
+}
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    
+  }
+
+  .header-area {
+   color: black;
+  }
+  #image-logo{
+    width: 120px;
+    height: 50px;
+  }
+   /* navbar regular css start */
+  
+  .site-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  a.site-logo {
+    text-decoration: none;
+
+  }
+  .site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  .site-navbar ul li a {
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 23px;
+  }
+  .site-navbar ul li a:hover {
+    background: rgba(255,255,255,.1);
+  }
+  /* navbar regular css end */
+  
+  
+  /* nav-toggler css start */
+  .nav-toggler {
+    border: 3px solid #fff;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+  }
+  .nav-toggler span, 
+  .nav-toggler span:before, 
+  .nav-toggler span:after {
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    transition: .3s;
+  }
+  .nav-toggler span:before {
+    content: '';
+    transform: translateY(-9px);
+  }
+  .nav-toggler span:after {
+    content: '';
+    transform: translateY(6px);
+  }
+  
+  .nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  .nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+.dance{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    /*
+    background:  url('page/beautiful-modern-dancer-girl-5QJA8NK-800x843.png');
+    */
+   padding-top: 20px;
+   padding: 60px; 
+  
+    
+}
+.fit{
+  position: absolute;
+  z-index: -10;
+  bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+top: 10em;
+}
+
+.about{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto auto auto;
+  background-color:red ;
+  margin: 10px;
+}
+#para{
+  font-size: 10em;
+  line-height: 90%;
+}
+.buttons{
+margin-top: 40px;
+ display: grid;
+ justify-content: center;
+ grid-template-columns: auto auto;
+ gap: 25px;
+}
+
+
+#learn-more{
+height: 60px;
+width: 200px;
+ font-size: 20px;
+ background-color: rgb(72, 72, 72);
+ color: white;
+ border: 3px solid rgb(72, 72, 72);
+}
+#video{
+  border-radius: 50%;
+ height: 60px;
+  width: 65px;
+  text-align: center;
+border: 3px solid grey;
+}
+  /* mobile breakpoint start */
+  @media screen and (max-width: 867px) {
+  
+    /* navbar css for mobile start */
+    .nav-toggler{
+      display: block;
+    }
+    #mods{
+      width:100%;
+    }
+    .site-navbar {
+      min-height: 60px;
+    }
+    .site-navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px);
+      left: 0;
+      top: 60px;
+      flex-direction: column;
+      align-items: center;
+     background-color: rgb(230, 224, 224);
+ 
+      max-height: 0;
+      overflow: hidden;
+      transition: .5s;
+    }
+   
+  
+    .site-navbar ul.open {
+      max-height: 100vh;
+      overflow: visible;
+    }
+    .about{
+      display: grid;
+      justify-content: center;
+      grid-template-columns: auto auto;
+
+    }
+    
+    /* navbar css for mobile end */
+  }
+  /* mobile breakpoint end */
+  @media screen and (max-width: 668px){
+
+    .about{
+      display: grid;
+      justify-content: center;
+      grid-template-columns: auto ;
+
+    }
+
+   
+    #mods{
+      width:100%;
+      top: 0em;
+        }
+  }
