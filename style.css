@@ -1,11 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Bebas+Neue&family=Big+Shoulders+Stencil+Display&family=Cormorant+Garamond:wght@300&family=Gemunu+Libre:wght@200;300&family=Monoton&family=Montserrat+Alternates:wght@100&family=Oswald:wght@600&family=Poppins:wght@100&family=Roboto+Flex:opsz,wght@8..144,100&family=Roboto:wght@100;900&family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Bebas+Neue&family=Big+Shoulders+Stencil+Display&family=Cormorant+Garamond:wght@300&family=Gemunu+Libre:wght@200;300&family=Monoton&family=Montserrat+Alternates:wght@100&family=Oswald:wght@600&family=Poppins:wght@100&family=Roboto+Flex:opsz,wght@8..144,100&family=Roboto:wght@100;900&family=Teko:wght@300&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 body{
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(247, 247, 247);
+
+  font-family: 'Teko', sans-serif;
 }
+
   .container {
     width: 100%;
     margin: 0 auto;
@@ -50,10 +58,8 @@ body{
   
   
   /* nav-toggler css start */
-  .nav-toggler {
-    border: 3px solid #fff;
+  .nav-toggler { 
     padding: 5px;
-    background-color: transparent;
     cursor: pointer;
     height: 39px;
     display: none;
@@ -63,7 +69,7 @@ body{
   .nav-toggler span:after {
     width: 28px;
     height: 3px;
-    background-color: #fff;
+    background-color:black;
     display: block;
     transition: .3s;
   }
@@ -82,15 +88,12 @@ body{
   .nav-toggler.toggler-open span:after {
     transform: translateY(-3px) rotate(-45deg);
   }
-.dance{
+.dance-container{
     display: grid;
     place-content: center;
     text-align: center;
-    /*
-    background:  url('page/beautiful-modern-dancer-girl-5QJA8NK-800x843.png');
-    */
-   padding-top: 20px;
-   padding: 60px; 
+   margin-top: 70px;
+   padding: 70px; 
   
     
 }
@@ -108,11 +111,23 @@ top: 10em;
   display: grid;
   justify-content: center;
   grid-template-columns: auto auto auto auto;
-  background-color:red ;
-  margin: 10px;
+  background-color:rgb(215, 215, 215);
+  margin: 110px;
+  opacity: 0.85;
+ 
 }
-#para{
-  font-size: 10em;
+.about >div{
+  padding: 40px 30px 0px 40px;
+text-align: center;
+
+
+}
+.about p{
+  font-size: 25px;
+}
+#text{
+  font-size: 12em;
+  font-weight: bold;
   line-height: 90%;
 }
 .buttons{
@@ -125,28 +140,121 @@ margin-top: 40px;
 
 
 #learn-more{
-height: 60px;
+height: 70px;
 width: 200px;
  font-size: 20px;
  background-color: rgb(72, 72, 72);
  color: white;
  border: 3px solid rgb(72, 72, 72);
 }
+.ping-container{
+  position: relative;
+ 
+}
 #video{
   border-radius: 50%;
- height: 60px;
-  width: 65px;
+ height: 70px;
+  width: 70px;
   text-align: center;
-border: 3px solid grey;
+border: 3px solid rgb(122, 122, 122);
+  animation: load 1.5s ease-out infinite;
 }
+@keyframes load {
+  0%{
+    background: rgb(46, 41, 41);
+    border: 20px solid rgb(79, 79, 79);
+  }
+  10%{
+    background: rgb(172, 172, 172);
+    border: 10px solid #fff;
+  }
+  
+}
+.aboutDanze{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  margin-top: 170px;
+  gap: 60px;
+
+}
+#danze-picture img{
+  width: 100%;
+
+height: 100%;
+
+}
+.item2 h1{
+  font-family: 'Bebas Neue', cursive;
+}
+.item2{
+  display: grid;
+  grid-template-columns:auto auto auto ;
+
+margin-top: 50px;
+justify-content: start;
+text-align: center;
+gap: 40px;
+font-size: 2em;
+
+}
+.item2 > div{
+  background-color: gray;
+  padding: 18px 50px 18px 50px;
+}
+#danze-about{
+padding:150px 10px 10px 10px
+
+}
+#item1 p{
+  font-size: 23px;
+  padding-top: 20px;
+  color: gray;
+  text-transform: lowercase;
+}
+#item1 h1{
+  font-size: 4em;
+  font-family: 'Bebas Neue', cursive;
+}
+.lets-dance{
+  padding-top: 100px;
+  font-family: 'Bebas Neue', cursive;
+}
+section{
+  text-align: center;
+  background-color: rgb(233, 233, 233);
+}
+.classes-section{
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px;
+}
+.classes-section > div{
+  padding: 20px;
+  background-color: red;
+}
+.classes h1{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5em;
+  padding-top: 70px;
+
+}
+/* ping  animation */
+
   /* mobile breakpoint start */
   @media screen and (max-width: 867px) {
   
     /* navbar css for mobile start */
+    .nav-log{
+      visibility: hidden;
+      }
     .nav-toggler{
       display: block;
+      border: 0px solid white;
     }
-    #mods{
+    #dance-logo{
       width:100%;
     }
     .site-navbar {
@@ -160,26 +268,46 @@ border: 3px solid grey;
       top: 60px;
       flex-direction: column;
       align-items: center;
-     background-color: rgb(230, 224, 224);
+     background-color: rgb(243, 243, 243);
  
       max-height: 0;
       overflow: hidden;
       transition: .5s;
     }
    
-  
+  #item1{
+  text-align: center;
+}
     .site-navbar ul.open {
       max-height: 100vh;
       overflow: visible;
     }
     .about{
-      display: grid;
-      justify-content: center;
-      grid-template-columns: auto auto;
-
-    }
+     
+      grid-template-columns: auto auto auto auto;
+      margin: 20px;
     
+    }
+    .about > div{
+      
+      padding: 0;
+    }
+    .aboutDanze{
+      padding: 0;
+      grid-template-columns: auto ;
+     
+    }
+    .item2{
+      grid-template-columns: auto  ;
+      justify-content: center;
+  
+    } 
+    .item2 > div{
+      padding: 20px 90px 20px 90px;
+     
+    }  
     /* navbar css for mobile end */
+    
   }
   /* mobile breakpoint end */
   @media screen and (max-width: 668px){
@@ -188,12 +316,29 @@ border: 3px solid grey;
       display: grid;
       justify-content: center;
       grid-template-columns: auto ;
-
+      margin: 30px;
     }
 
    
-    #mods{
-      width:100%;
-      top: 0em;
+    #dance-logo{
+      width:90%;
+     
         }
+        #image-logo{
+          width: 117px;
+          height: 37px;
+        }
+        #text{
+          font-size: 5em;
+     
+        }
+        .lets-dance{
+          padding-top: 50px;
+        } 
+           
+        .classes-section{
+         
+          grid-template-columns: auto ;          
+        }  
+       
   }
