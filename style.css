@@ -9,7 +9,6 @@
     box-sizing: border-box;
   }
 
-
   p,a{
   line-height: 170%;
   font-size:1em;
@@ -25,7 +24,18 @@ body{
     padding: 10px;
     
   }
-
+  .contacts-card > div {
+    background-color: gray;
+    text-align: center;
+    padding: 30px;
+    color: white;
+    opacity: 0.9;
+  }
+  .contacts-card > div h1{
+    font-size: 6em;
+    font-family: 'Bebas Neue', cursive;
+   
+  }
   .header-area {
    color: black;
   }
@@ -118,7 +128,7 @@ body{
   justify-content: center;
   grid-template-columns: auto auto auto auto;
   background-color:rgb(215, 215, 215);
-  margin: 110px;
+  margin: 70px;
   opacity: 0.85;
  
 }
@@ -126,9 +136,13 @@ body{
 .about h1,h2{
   font-family: 'Bebas Neue', cursive;
 }
+.about h2{
+  font-size: 1.7em;
+}
 .about >div{
   padding: 45px 60px 30px 45px;
 text-align: center;
+
 }
 
 #text{
@@ -153,10 +167,7 @@ width: 200px;
  color: white;
  border: 3px solid rgb(72, 72, 72);
 }
-.ping-container{
-  position: relative;
- 
-}
+
 #video{
   border-radius: 50%;
  height: 70px;
@@ -260,7 +271,7 @@ section{
 
 .classes-section h2{
   font-family: 'Bebas Neue', cursive;
-  font-size: 2.5em;
+  font-size: 1.7em;
 }
 #dance-logo{
   filter:contrast(60%) brightness(130%);
@@ -284,6 +295,10 @@ section{
 }
 #client-btn{
   padding:20px 50px 20px 50px;
+  border: 2px solid black;
+  font-size: 1em;
+  margin-top: 30px;
+  background-color: transparent;
 }
 footer{
   display: grid;
@@ -392,7 +407,9 @@ footer p,
       grid-template-columns: auto ;
       margin: 30px;
     }
-
+   .item2 > div{
+    padding: 30px 80px 30px 90px;
+   }
    
     #dance-logo{
       width:90%;
@@ -423,8 +440,10 @@ footer p,
         }
         footer{
           grid-template-columns: auto;
+          gap: 0px;
         }
         footer >div{
        text-align: center;
+       padding: 15px 0px 20px 0px;
         }
   }
