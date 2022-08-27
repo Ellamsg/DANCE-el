@@ -130,6 +130,7 @@ body{
   background-color:rgb(215, 215, 215);
   margin: 70px;
   opacity: 0.85;
+  
  
 }
 /* about*/
@@ -193,12 +194,13 @@ border: 3px solid rgb(122, 122, 122);
   justify-content: center;
   margin-top: 170px;
   gap: 20px;
+
  
 }
 
 #danze-picture img{
-  width: 87%;
-height: 95%;
+  width: 75%;
+height: 90%;
 
 }
 .item2 h1{
@@ -325,6 +327,19 @@ footer p,
 .footer2 p{
   color: gray;
 }
+.General{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  padding: 50px;
+}
+.General img{
+  width: 70%;
+  height: 95%;
+}
+.svg-logo{
+  width: 20%;
+}
 
 /* ping  animation */
 
@@ -374,8 +389,10 @@ footer p,
     
     }
     .about > div{
+        padding: 15px 20px 12px 20px;
+      text-align: center;
       
-      padding: 0;
+      
     }
     .aboutDanze{
       padding: 0;
@@ -445,5 +462,14 @@ footer p,
         footer >div{
        text-align: center;
        padding: 15px 0px 20px 0px;
+        }
+        .General{
+          grid-template-columns: 1fr;
+          
+        }
+        #danze-picture img{
+          width: 93%;
+        height: 93%;
+        
         }
   }
