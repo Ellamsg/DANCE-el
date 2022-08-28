@@ -28,50 +28,45 @@ function navLinkClick() {
 }
 
 
-/*
-jQuery(document).ready(function() {
-  var imgs = jQuery('img-expand').children();
-  var contWidth = jQuery('#img-container').width();
-  
-  
-  var bigWidth = 30;
-  var smallWidth = (100 - bigWidth) / (imgs.length);
-  var mouseSmalLWidth = (100/imgs.length - 1);
-  var normalWidth = (100/ imgs.length);
-  // var smallWidth =  (contWidth - bigWidth) / (imgs.length - 1);
-  
-  console.log(smallWidth);
-  console.log(bigWidth);
-  // console.log(imgs.length);
-  // console.log(contWidth);
-  
-  jQuery('.img-expand').mouseover(function() {
-    jQuery(this).stop().animate({
-      // width: bigWidth+'%'
-      width: '40%'
-    }, 300);
-    
-    jQuery(this).siblings().stop().animate( {
-      // width: smallWidth+'%'
-      width: '15%'
-    }, 300);
-    
-  })
-  
-  jQuery('.img-expand').mouseout(function(){
-    jQuery(this).stop().animate({
-      // width: smallWidth+'%'
-      width: '20%'
-    }, 300);
-    jQuery(this).siblings().stop().animate( {
-      // width: smallWidth+'%'
-      width: '20%'
-    }, 300);
-  })
-  
-  
-});
-*/
+// Scroll Animation
+let section_counter = document.querySelector('#section_counter');
+let counters = document.querySelectorAll('.counter-item .counter');
 
+let CounterObserver = new IntersectionObserver(
+  (entries, observer) => {
+    let [entry] = entries;
+    if (!entry.isIntersecting) return;
 
-//testing
+    let speed = 200;
+    counters.forEach((counter, index) => {
+      function UpdateCounter() {
+        const targetNumber = +counter.dataset.target;
+        const initialNumber = +counter.innerText;
+        const incPerCount = targetNumber / speed;
+        if (initialNumber < targetNumber) {
+          counter.innerText = Math.ceil(initialNumber + incPerCount);
+          setTimeout(UpdateCounter, 40);
+        }
+        else {
+          counter.innerText = targetNumber;
+        }
+      }
+      UpdateCounter();
+
+      if (counter.parentElement.style.animation) {
+        counter.parentElement.style.animation = '';
+      } else {
+        counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${
+          index / counters.length + 0.5
+        }s`;
+      }
+    });
+    observer.unobserve(section_counter);
+  },
+  {
+    root: null,
+    threshold: window.innerWidth > 768 ? 0.4 : 0.3,
+  }
+);
+
+CounterObserver.observe(section_counter);
