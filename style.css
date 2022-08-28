@@ -159,7 +159,6 @@ margin-top: 40px;
  gap: 25px;
 }
 
-
 #learn-more{
 height: 70px;
 width: 200px;
@@ -176,6 +175,25 @@ width: 200px;
   text-align: center;
 border: 3px solid rgb(122, 122, 122);
   animation: load 1.5s ease-out infinite;
+}
+#video:hover{
+ 
+ height: 70px;
+  width: 70px;
+  
+border: 3px solid rgb(196, 23, 130);
+  animation: change 1.5s ease-out infinite;
+}
+@keyframes change {
+  0%{
+    background: rgb(186, 13, 13);
+    border: 20px solid rgb(39, 162, 30);
+  }
+  10%{
+    background: rgb(11, 9, 154);
+    border: 10px solid rgb(143, 197, 8);
+  }
+  
 }
 @keyframes load {
   0%{
@@ -194,14 +212,12 @@ border: 3px solid rgb(122, 122, 122);
   justify-content: center;
   margin-top: 170px;
   gap: 20px;
-
- 
 }
 
 #danze-picture img{
   width: 75%;
 height: 90%;
-
+object-fit: contain !important;
 }
 .item2 h1{
   font-family: 'Bebas Neue', cursive;
@@ -262,7 +278,7 @@ section{
   padding-bottom: 20px;
 }
 .classes-section > div{
-  padding: 20px;
+  padding: 44px;
   background-color: rgb(242, 242, 242);
 }
 .classes h1{
@@ -277,6 +293,7 @@ section{
 }
 #dance-logo{
   filter:contrast(60%) brightness(130%);
+
   }
 .client-say{
   display: grid;
@@ -336,9 +353,23 @@ footer p,
 .General img{
   width: 70%;
   height: 95%;
+  filter:grayscale(100%);
 }
 .svg-logo{
   width: 20%;
+}
+.icon{
+  background-color: rgb(59, 58, 58);
+  width: 40px;
+  height: 38px;
+  padding-top: 10px;
+  color: aliceblue;
+  margin-bottom: 15px;
+}
+.icon2{
+  background-color: rgb(199, 199, 199);
+  color: rgb(51, 52, 52);
+  padding: 10px;
 }
 
 /* ping  animation */
