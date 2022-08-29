@@ -216,7 +216,8 @@ border: 3px solid rgb(196, 23, 130);
 
 #danze-picture img{
   width: 75%;
-height: 90%;
+  margin: 10px;
+
 object-fit: contain !important;
 }
 .item2 h1{
@@ -243,13 +244,15 @@ gap: 40px;
   box-shadow: 0px 10px 25px rgb(124, 116, 116);
 }
 .item2 > div{
-  background-color: gray;
+  background-color: rgb(214, 214, 214);
   padding: 18px 50px 18px 50px;
+  color: rgb(65, 65, 65);
 }
 #danze-about{
 padding:150px 10px 10px 10px
 
 }
+
 #item1 p{
   padding-top: 20px;
   color: gray;
@@ -348,12 +351,21 @@ footer p,
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  padding: 50px;
+  padding:70px 50px 20px 20px;
+  background-color: rgb(233, 233, 233);
 }
 .General img{
   width: 70%;
   height: 95%;
   filter:grayscale(100%);
+ 
+}
+.ques{
+  padding-top:170px;
+}
+.ques h1{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3em;
 }
 .svg-logo{
   width: 20%;
@@ -371,17 +383,31 @@ footer p,
   color: rgb(51, 52, 52);
   padding: 10px;
 }
-#panel, #flip {
-  padding: 5px;
-  text-align: center;
-  background-color: #e5eecc;
-  border: solid 1px #c3c3c3;
+
+
+/*details styling*/
+details.styled{
+  max-height: 80px;
+  transition:all 0.8s ease-in-out ;
+  overflow: hidden;
+  
+}
+details[open].styled{
+max-height: 700px;
 }
 
-#panel {
-  padding: 50px;
-  display: none;
+details.styled summary{
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+margin-top: 12px;
+padding: 20px;
+list-style-type: none;
+font-family: 'Bebas Neue', cursive;
+font-size: 1em;
+font-weight: bold;
 }
+
 
 /* ping  animation */
 
@@ -425,20 +451,19 @@ footer p,
       overflow: visible;
     }
     .about{
-     
+    
       grid-template-columns: auto auto auto auto;
       margin: 20px;
     
     }
     .about > div{
         padding: 15px 20px 12px 20px;
-      text-align: center;
-      
-      
+      text-align: center; 
     }
     .aboutDanze{
       padding: 0;
       grid-template-columns: auto ;
+      margin-top:80px;
      
     }
     .item2{
@@ -452,6 +477,13 @@ footer p,
       gap: 30px;
       
     }
+    .classes-section > div{
+      padding:24px 8px 24px 8px;
+      
+    }
+    .ques{
+      padding-top:50px;
+    }
     /* navbar css for mobile end */
     
   }
@@ -464,10 +496,10 @@ footer p,
       display: grid;
       justify-content: center;
       grid-template-columns: auto ;
-      margin: 30px;
+      margin: 20px;
     }
    .item2 > div{
-    padding: 30px 80px 30px 90px;
+    padding: 26px 100px 26px 100px;
    }
    
     #dance-logo{
@@ -490,6 +522,13 @@ footer p,
          
           grid-template-columns: auto ;          
         }  
+        .classes h1{
+          font-size: 2em;
+          
+        }
+        .classes{
+          padding: 20px;
+        }
         .client-say{
           grid-template-columns: auto;
         }
@@ -507,6 +546,7 @@ footer p,
         }
         .General{
           grid-template-columns: 1fr;
+          padding:17px;
           
         }
         #danze-picture img{
@@ -514,4 +554,21 @@ footer p,
         height: 93%;
         
         }
+        .General img{
+          width: 100%;   
+        }
+        .ques{
+          padding-top:10px;
+        }
+        .ques h1{
+          text-align: center;
+          font-size: 2em;
+        }
+       #item1 h1{
+        font-size: 2em;
+       }
+        #danze-about{
+          padding:10px 10px 10px 10px
+          
+          }
   }
