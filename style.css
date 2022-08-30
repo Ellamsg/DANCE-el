@@ -420,8 +420,7 @@ font-weight: bold;
 /* scroll on reveal animation*/
 .reveal{
   position: relative;
-  transform: translateX(150px);
-
+  transform: translateZ(100px);
   opacity: 0;
   transition: all 2s ease;
 }
