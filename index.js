@@ -70,3 +70,46 @@ let CounterObserver = new IntersectionObserver(
 );
 
 CounterObserver.observe(section_counter);
+
+//scroll on reveal animation
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+  var reveals = document.querySelectorAll('.reveal');
+
+  for(var i = 0; i < reveals.length; i++){
+
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 150;
+
+    if(revealtop < windowheight - revealpoint){
+      reveals[i].classList.add('active');
+    }
+    else{
+      reveals[i].classList.remove('active');
+    }
+  }
+}
+
+
+
+window.addEventListener('scroll', sidereveal);
+
+function sidereveal(){
+  var sidereveals = document.querySelectorAll('.sidereveal');
+
+  for(var i = 0; i < sidereveals.length; i++){
+
+    var windowheight = window.innerHeight;
+    var siderevealtop = sidereveals[i].getBoundingClientRect().top;
+    var siderevealpoint = 150;
+
+    if(siderevealtop < windowheight - siderevealpoint){
+      sidereveals[i].classList.add('active');
+    }
+    else{
+      sidereveals[i].classList.remove('active');
+    }
+  }
+}

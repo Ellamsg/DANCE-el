@@ -167,7 +167,12 @@ width: 200px;
  color: white;
  border: 3px solid rgb(72, 72, 72);
 }
-
+#learn-more:hover{
+  color: black;
+  background-color: transparent;
+  border: 3px solid rgb(72, 72, 72);
+  transition: 2s ease;
+}
 #video{
   border-radius: 50%;
  height: 70px;
@@ -307,6 +312,7 @@ section{
   background-size: cover;
  
 }
+
 .client-say > div{
   padding: 140px 40px 100px 100px;
 }
@@ -410,6 +416,32 @@ font-weight: bold;
 #star-logo{
   width: 110px;
   height: 30px;
+}
+/* scroll on reveal animation*/
+.reveal{
+  position: relative;
+  transform: translateX(150px);
+
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.sidereveal{
+  position: relative;
+  transform: translateY(120px);
+
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.sidereveal.active{
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 /* ping  animation */
