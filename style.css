@@ -38,7 +38,7 @@ body{
   }
   .header-area {
    color: black;
-   position:sticky;
+   position:fixed;
    width: 100%;
    top:0;
    z-index: 1;
@@ -276,7 +276,7 @@ padding:150px 10px 10px 10px
   font-family:'Brush Script MT', cursive;
 }
 .lets-dance{
-  padding-top: 100px;
+  padding-top: 190px;
   font-family: 'Bebas Neue', cursive;
 }
 section{
@@ -587,7 +587,7 @@ font-weight: bold;
      
         }
         .lets-dance{
-          padding-top: 50px;
+          padding-top: 120px;
         } 
            
         .classes-section{
