@@ -442,7 +442,43 @@ font-weight: bold;
   transform: translateY(0px);
   opacity: 1;
 }
+/* hover image animation */
 
+.image-grid-container{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  height: 90vh;
+}
+.image-grid-container > div{
+  margin: 0px;
+}
+.imagebox{
+   flex: 1;
+   overflow: hidden;
+   transition: 0.5s;
+   margin: 0.5%;
+   box-shadow: 0px 0px 0px #ccc;
+}
+.imagebox img{
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: 1.5s;
+}
+.imagebox span{
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.5;
+}
+.imagebox:hover{
+  flex:  1 1 50%;
+}
+.imagebox:hover img{
+  width: 100%;
+}
 /* ping  animation */
 
   /* mobile breakpoint start */
@@ -608,5 +644,41 @@ font-weight: bold;
         #danze-about{
           padding:10px 10px 10px 10px
           
+          }
+          .image-grid-container{
+            margin: 0;
+            display: flex;
+            width: 100%;
+          flex-wrap: wrap;
+            box-sizing: border-box;
+            height: 70vh;
+            flex-direction: column;
+            background-color: red;
+            
+          }
+          .image-grid-container > div{
+            margin: 0px;
+          }
+          .imagebox{
+            height: 100px;
+             flex: 1;
+            background-color: green;
+             overflow: hidden;
+             transition: 0.5s;
+            
+             box-shadow: 0px 0px 0px #ccc;
+          }
+          .imagebox img{
+            width: 200%;
+            height: calc(100% );
+            object-fit: cover;
+            transition: 1.5s;
+          }
+          
+          .imagebox:hover{
+            flex:  1 1 50%;
+          }
+          .imagebox:hover img{
+            width: 100%;
           }
   }
