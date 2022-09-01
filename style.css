@@ -311,6 +311,7 @@ section{
   background-position: center;
   background-size: cover;
  
+ 
 }
 
 .client-say > div{
@@ -465,19 +466,14 @@ font-weight: bold;
   height: calc(100% - 10vh);
   object-fit: cover;
   transition: 1.5s;
+ 
 }
-.imagebox span{
-  font-size: 3.8vh;
-  display: block;
-  text-align: center;
-  height: 10vh;
-  line-height: 2.5;
-}
+
 .imagebox:hover{
   flex:  1 1 50%;
 }
 .imagebox:hover img{
-  width: 100%;
+  width: 100%; 
 }
 /* ping  animation */
 
@@ -601,6 +597,7 @@ font-weight: bold;
         }
         .client-say{
           grid-template-columns: auto;
+          margin-top: 50px;
         }
         .client-say > div{
           padding: 50px 22px 100px 22px;
