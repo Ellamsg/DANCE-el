@@ -653,7 +653,6 @@ font-weight: bold;
             box-sizing: border-box;
             height: 70vh;
             flex-direction: column;
-            background-color: red;
             
           }
           .image-grid-container > div{
@@ -662,7 +661,6 @@ font-weight: bold;
           .imagebox{
             height: 100px;
              flex: 1;
-            background-color: green;
              overflow: hidden;
              transition: 0.5s;
             
